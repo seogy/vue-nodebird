@@ -1,0 +1,62 @@
+
+1. ch1/front 폴더 만들기
+2. cd ch1/front
+3. > npm init
+   package name: (front) vue-nodebird-front
+   다 엔터
+   package.json 파일이 생성된다.
+4. vue, nuxt 설치
+   > npm i vue nuxt
+5. vue 공식문서, nuxt 공식문서 보기
+https://vuejs.org/v2/guide/
+https://ko.nuxtjs.org/guide/
+
+6. ch1/front/pages 폴더 만들기
+7. pages폴더안에 index.vue signup.vue profile.vue 파일 만들기
+8. nuxt는 뷰 위에서 뷰의 기능을 확장한 프레임워크(웹 사이트를 위해서)
+   웹사이트는 컴포넌트 보다는 페이지 중심이다.
+   컴포넌트가 아닌 페이지들을 위해서 따로 폴더를 마련해 놓음.
+   .vue안에 들어 있는 컴포넌트들은 페이지 컴포넌트로 친다.
+   그래서 자동으로 nuxt에서 .vue파일을 페이지로 만들어 준다.
+9. .vue 안 문법은 컴포넌트랑 똑같다.
+<template></template>
+
+<script></script>
+
+<style></style>
+
+10.
+<template>
+  <div>
+    Hello {{name}}
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        name: 'Nuxt.js',
+      }
+    }
+  }
+</script>
+
+<style></style>
+
+11.
+package.json 수정
+  "scripts": {
+    "dev": "nuxt"
+  },
+>npm run dev 로 실행할 수 있다.
+
+웹프로그래밍 할때는 보통 개발모드와 배포 모드가 있다.
+개발모드 - 로그 자세히 보여서 개발하기 편리
+배포모드 - 용량큰거 압축, 로그 없고
+
+12. 폴더 구조 그대로 주소가 생성된다.
+/user/zerocho.vue
+user폴더 안에 zerocho.vue파일
+localhost/user/zerocho
+
